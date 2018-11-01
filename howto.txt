@@ -1,0 +1,5 @@
+npm install --save electron-updater electron-log electron-is-dev
+
+npm run dist
+
+"C:\Users\MichalGarlik\AppData\Local\Programs\digital-clock\Digital Clock.exe"

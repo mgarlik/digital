@@ -1,0 +1,52 @@
+{
+  "name": "digital",
+  "version": "0.0.1",
+  "description": "Digital Clock",
+  "author": "Michal Garlik",
+  "license": "MIT",
+  "main": "main.js",
+  "repository": "git@github.com:mgarlik/digital.git",
+  "build": {
+    "appId": "com.my.digitalclock",
+    "productName": "digital",
+    "publish": [
+      {
+        "provider": "github",
+        "repo": "digital",
+        "owner": "mgarlik"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico",
+      "license": "LICENSE",
+      "runAfterFinish": true
+    },
+    "portable": {
+      "requestExecutionLevel": "user"
+    }
+  },
+  "scripts": {
+    "pack": "build --dir",
+    "dist": "build --arch all",
+    "postinstall": "install-app-deps",
+    "start": "electron .",
+    "gh-publish": "electron-builder --x64 --mac -p always"
+  },
+  "devDependencies": {
+    "electron": "^1.6.6",
+    "electron-builder": "^19.5.0"
+  },
+  "dependencies": {
+    "electron-is-dev": "^0.2.0",
+    "electron-log": "^2.2.7",
+    "electron-updater": "^2.18.2"
+  }
+}
