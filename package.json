@@ -13,7 +13,8 @@
       {
         "provider": "github",
         "repo": "digital",
-        "owner": "mgarlik"
+        "owner": "mgarlik",
+        "private": false
       }
     ],
     "win": {
